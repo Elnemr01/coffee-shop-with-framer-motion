@@ -1,0 +1,458 @@
+
+/* hero section style */
+
+.hero {
+    background-image: url('../src/assets/bgHero.png');
+    background-size: cover;
+    min-height: 100lvh;
+    overflow: hidden;
+}
+
+.hero > .container {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 20px;
+}
+
+@media (width<=992px) {
+    .hero > .container {
+        grid-template-columns: repeat(2,1fr);
+    }
+}
+
+@media (width<=667px) {
+    .hero > .container {
+        grid-template-columns: auto;
+    }
+}
+
+.hero .part {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.hero .part .text {
+    position: relative;
+    padding: 20px;
+}
+
+.hero .part .text::before {
+    position: absolute;
+    background-color: #37415140;
+    content: '';
+    width: 50%;
+    height: 100%;
+    top: 0;
+    left: -50px;
+}
+
+.hero .part3 .text::before {
+    left: calc(50%)
+}
+
+.hero .part h1 {
+    font-size: 80px;
+    font-weight: 700;
+    color: #ffdde3;
+}
+
+@media (width<=667px) {
+    .hero .part h1 {
+        font-size: 60px;
+    }
+}
+
+.hero .part .text {
+    
+}
+
+.hero .part h2 {
+    font-weight: 500;
+    color: #ffdde3;
+}
+
+.hero .part p {
+    font-size: .875rem;
+    margin-top: .875rem;
+    color: #7e6c6c;
+}
+
+
+/* parts */
+
+.part1 {
+
+}
+
+.hero .part2 {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.part2 img {
+    position: relative;
+    z-index: 1;
+}
+
+.part2 .round {
+    position: absolute;
+    content: '';
+    width: 180px;
+    aspect-ratio: 1 / 1;
+    border-radius: 50%;
+    border: 20px solid #f19509;
+    top: 90px;
+    z-index: 1;
+    left: calc(50% + 50px);
+}
+
+.hero .part3 {
+    position: relative;
+}
+
+@media (width<=992px) {
+    .hero .part3 {
+        display: none;
+    }
+}
+
+.hero .part3 h1 {
+    position: absolute;
+    top: 0;
+    line-height: 1.1;
+    scale: 2;
+    color: #1a1f2566 !important;
+}
+
+.hero .part3 .text {
+    margin-top: 400px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* coffee drinks section style */
+
+.coffeeDrinks {
+    margin: 50px 0;
+}
+
+.coffeeDrinks .title {
+    text-align: center;
+    padding: 10px;
+    max-width: 50%;
+    margin: 0 auto;
+}
+
+.coffeeDrinks .title h1 {
+    font-size: 24px;
+    font-weight: 700;
+    color: rgb(39 44 53);
+    text-transform: capitalize;
+}
+
+@media (width<=667px) {
+    .coffeeDrinks .title {
+        max-width: 100%;
+    }
+}
+
+.coffeeDrinks .title h1 span {
+    color: rgb(241 149 9);
+}
+
+.coffeeDrinks .title p {
+    font-size: .875rem;
+    margin-top: 10px;
+}
+
+.coffeeDrinks .drinks {
+    margin-top: 30px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(300px,1fr));
+    gap: 1rem;
+}
+
+/* coffee order section style */
+
+.coffeeOrder {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    margin: 100px 0;
+    gap: 1rem;
+}
+
+@media (width<=667px) {
+    .coffeeOrder {
+        grid-template-columns: auto;
+        gap: 50px;
+    }
+}
+
+.coffeeOrder form h1 {
+    font-size: 32px;
+    font-weight: 600;
+    font-family: serif;
+}
+
+.coffeeOrder form input {
+    padding: 5px 10px;
+    border-radius: 5px;
+    border: 2px solid #eee;
+    flex: 1;
+}
+
+.coffeeOrder form input:focus {
+    border-color: black;
+}
+
+.coffeeOrder form .first,
+.coffeeOrder form .second {
+    display: flex;
+    gap: 10px;
+    margin: 20px 0;
+}
+
+@media (width <=992px) {
+    .coffeeOrder form .first,
+    .coffeeOrder form .second {
+        flex-direction: column;
+    }
+}
+
+.coffeeOrder form .first input:first-child,
+.coffeeOrder form .second input:last-child {
+    width: 40%;
+}
+
+@media (width <=992px) {
+    .coffeeOrder form .first input:first-child,
+    .coffeeOrder form .second input:last-child {
+        width: 100%;
+    }
+}
+
+.coffeeOrder form button {
+    width: 100%;
+    padding: 10px;
+    text-align: center;
+    color: white;
+    background-color: orange;
+    border-radius: 5px;
+    text-transform: capitalize;
+    font-weight: 600;
+}
+
+
+.coffeeOrder .image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.coffeeOrder .image img {
+    width: 500px;
+}
+
+/* download app section style */
+
+.downloadApp {
+    display: flex;
+    justify-content: end;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url('./assets/background.jpg');
+}
+
+@media (width <=667px) {
+    .downloadApp {
+        justify-content: center;
+    }
+}
+
+.downloadApp > div {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    height: 450px;
+}
+
+@media (width <=667px) {
+    .downloadApp > div {
+        width: 100%;
+    }
+}
+
+.downloadApp > div h1 {
+    font-size: 22px;
+    font-weight: 600;
+}
+
+.downloadApp > div p {
+    text-align: center;
+    font-size: .875rem;
+}
+
+.downloadApp .links {
+    display: flex;
+    gap: 15px;
+}
+
+.downloadApp .links a img {
+    width: 150px;
+}
+
+/* footer style */
+
+footer {
+    margin-top: 50px;
+    padding-top: 20px;
+    background-color: #f19509;
+    color: white;
+    overflow: hidden;
+}
+
+
+footer .parts {
+    gap: 50px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+@media (width <=999px) {
+    footer .parts {
+        grid-template-columns: auto;
+    }
+}
+
+footer .copyRight {
+    padding: 30px 0;
+    border-top: 2px solid white;
+    display: flex;
+    align-content: center;
+    margin-top: 50px;
+    justify-content: center;
+    align-items: center;
+}
+
+@media (width<=667px) {
+    footer .copyRight {
+        font-size: 10px;
+    }
+}
+
+footer .part h1 {
+    font-size: 30px;
+    text-transform: capitalize;
+    margin-bottom: 16px;
+    font-weight: 700;
+}
+
+
+/* part 1 */
+
+
+footer .part1 p {
+    line-height: 1.6;
+    font-size: 14px;
+    width: 90%;
+}
+
+footer .part1 .telephone,
+footer .part1 .location {
+    display: flex;
+    align-items: center;
+    gap: 11px;
+    margin: .875rem 0;
+}
+
+footer .part1 .telephone span,
+footer .part1 .location span {
+    font-size: .875rem;
+    font-weight: 500;
+    text-transform: capitalize;
+}
+
+/* part 2 */
+
+footer .part2 ul {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    font-size: 16px;
+    font-weight: 500;
+    text-transform: capitalize;
+}
+
+/* part 3 */
+
+footer .part3 ul {
+    display: flex;
+    gap: 30px;
+    font-size: 24px;
+}
+
+footer .part3 .payment h2 {
+    margin: 10px 0;
+    text-transform: capitalize;
+    font-weight: 500;
+}
+
+footer .part3 .payment img {
+    max-width: 300px;
+}

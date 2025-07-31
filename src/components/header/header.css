@@ -1,0 +1,78 @@
+
+header {
+
+}
+
+header .container {
+    display: flex;
+    padding-left: 10px !important;
+    padding-right: 10px !important;
+    position: relative;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+}
+
+header .container .logo {
+    font-size: 18px;
+    font-weight: 700;
+    text-transform: capitalize;
+    color: white;
+}
+
+header .container .logo span {
+    color: #f19509;
+}
+
+header .container .links > :first-child {
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+    position: relative;
+    z-index: 2;
+}
+
+header .container .links ul {
+    position: absolute;
+    top: 100%;
+    min-height: 100lvh;
+    background-color: #f19509;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    color: white;
+    min-width: 120px;
+    /* left: 100%; */
+    font-size: 1.5rem;
+    transition: .3s;
+}
+
+header .container .links ul li:first-child,
+header .container .links ul li:last-child {
+    width: 1.5px;
+    height: 100px;
+    background-color: white;
+}
+
+header .container .links ul a {
+    position: relative;
+    display: inline-block;
+    border: 1px solid white;
+    padding: 10px;
+    border-radius: 50%;
+}
+
+/* 
+header .container .links ul a::before {
+    content: '';
+    position: absolute;
+    border: 1px solid white;
+    width: calc(100% + 20px);
+    height:  calc(100% + 20px);
+    border-radius: 50%;
+    padding: 10px;
+    top: -10px;
+    left: -10px;
+} */
