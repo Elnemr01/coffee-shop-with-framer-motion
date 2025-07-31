@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import './header.css'
 import { FaBars, FaFacebook, FaInstagram, FaTwitter } from 'react-icons/fa'
-import { delay, motion } from 'framer-motion'
+import { AnimatePresence, delay, motion } from 'framer-motion'
 
 const Header = () => {
 
@@ -31,13 +31,13 @@ const Header = () => {
                 </div>
                 <div className='links'>
                     <FaBars onClick={()=> setShow((old)=> !old)}/>
-                    <ul className={`${showMenue ? 'right-[0]' :'right-[-120px]' }`}>
+                    <motion.ul className={`${showMenue ? 'right-[0]' :'right-[-120px]' }`}>
                         <li></li>
                         <li><a href="#"><FaFacebook/></a></li>
                         <li><a href="#"><FaTwitter/></a></li>
                         <li><a href="#"><FaInstagram/></a></li>
                         <li></li>
-                    </ul>
+                    </motion.ul>
                 </div>
             </div>
         </motion.header>

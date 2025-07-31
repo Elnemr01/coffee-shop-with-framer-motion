@@ -45,6 +45,7 @@
     height: 100%;
     top: 0;
     left: -50px;
+    z-index: 3;
 }
 
 .hero .part3 .text::before {
